@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercicio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+    <body>
+    
+        <div class="align-items-center" style="background-image: url(img/blog-1.jpg)">
+                 
+        <main class="tela-principal">
+            <section class='conteudos'>
+                <h1>Quiz ambiental</h1>
+                    <article class='centro' id='instrucoes'>
+                        Leia a questão e clique na resposta correta
+                    </article>
+                    <article class='questoes'>
+                        <header class='questao'>
+                            <span id='numQuestao'></span>
+                            <h2 id='pergunta'></h2>
+                        </header>
+
+                        <!-- <figure class='imagemDaQuestao'>
+                            <img src="images/quiz/rosa_dos_ventos.png" alt="Imagem da questao" width="200px"/>
+                        </figure>
+                         -->
+                        <div class='corpo'>
+                            <ol type='A' id='alternativas'>
+                                <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                                <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                                <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                                <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                            </ol>
+                        </div>
+                    </article>
+                
+                <article id='aviso' class='centro'>
+                    <input type="range" value='1' min='1' max='10' step='1'
+                    name="progresso" id="progresso" disabled
+                    /> <br>
+                    <span id='numero'></span> de <span id='total'></span>
+                </article>
+            
+                <footer id='autoria' class='centro'>Projeto de etíca ambiental &copy; 2022</footer>
+            </section>
+        </main>
+
+</div>
+    <audio preload src="assets/positive.mp3" id='somAcerto'></audio>
+    <audio preload src="assets/negative.mp3" id='somErro'></audio>
+    <audio preload src="assets/aplausos.mp3" id='somAplausos'></audio>
+
+        <script src="script.js"></script>
+    </body>
+</html>
