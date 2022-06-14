@@ -1,0 +1,224 @@
+:root {
+    --principal: rgba(87, 71, 179, 0.699);
+    --secundaria: #0765f1;
+    --azul-escuro: #0d47a1;
+    --cinza-escuro: #222;
+    --branco: #fff;
+    --verde: #4caf50;
+    --vermelho: #f44336;
+}
+
+body {
+    font: normal 15pt Arial;
+}
+
+/* header {
+    color: rgb(165, 11, 11);
+    text-align: center;
+} */
+
+section {
+    /* background-color: rgba(206, 70, 17, 0.507); */
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+}
+
+.jumbotron {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-height: 100vh; 
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .jumbotron {
+      min-height: 500px; 
+    } 
+}
+
+.jumbotron .container {
+      position: relative;
+      z-index: 1; 
+}
+
+.jumbotron:before {
+      position: absolute;
+      display: block;
+      content: "";
+      opacity: 0.8;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ff00cc;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #333399, #ff00cc);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+.jumbotron h1 {
+      line-height: .8;
+      font-weight: bold;
+      display: inline-block;
+      border: none;
+      padding: 0px;
+      font-size: 9rem;
+      opacity: 0;
+      animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+      animation-delay: .8s; 
+}  
+.jumbotron-single h1 {
+    font-size: 3rem !important; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15rem;
+}
+
+section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50vh;
+}
+
+/* classe para centralizar textos, paragrafos */
+.centro {
+    text-align: center;
+}
+
+/* div class questao com numero da questao e pergunta */
+.questao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#numQuestao {
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background: var(--principal);
+    color: #fff;
+    padding: 6px 10px 4px 8px;
+    border-radius: 50%;
+}
+
+#pergunta {
+    margin-left: 1rem;
+}
+
+/* article que acomoda a questao completa */
+.questoes {
+    user-select: none;
+    background: rgba(224, 125, 194, 0.507);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border: 1px solid rgba(87, 71, 179, 0.699);
+    border-radius: 5px;
+    margin-bottom: 0.625rem;
+}
+
+.questoes ol li {
+    border: 1px solid var(--principal);
+    display: block;
+    margin-bottom: 0.625rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.questoes ol li:hover {
+    background: var(--principal);
+    cursor: pointer;
+}
+
+.bloqueado {
+    display: none;
+}
+
+.bloqueado li:hover {
+    display: none;
+}
+
+#instrucoes {
+    font-size: 1rem;
+    color: #faf9f5;
+    padding: 0.625rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+#aviso {
+    color: var(--branco);
+}
+
+/* ANIMACAO */
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px var(--principal));
+        -webkit-filter: drop-shadow(0 0 15px var(--principal));
+        -moz-filter: drop-shadow(0 0 15px var(--principal));
+        -o-filter: drop-shadow(0 0 15px var(--principal));
+        -ms-filter: drop-shadow(0 0 15px var(--principal));
+    }
+    100% {
+    }
+}
+
+.animar {
+    animation: piscar .75s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer .5s infinite alternate;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.acertou {
+    background: var(--verde);
+    animation: aparecer 0.1s infinite alternate;
+}
+
+.errou {
+    background: var(--vermelho);
+    animation: aparecer 0.1s infinite alternate;
+}
+
+.placar {
+    padding: 1rem;
+    border-radius: 8px;
+    background:#1ff802;
+    font-size: 2rem;
+}
